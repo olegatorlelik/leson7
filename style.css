@@ -212,22 +212,23 @@
 
   border-radius: 50%;
   background-image: url(img/Layer1.png);
-  background-color: rgba(0, 0, 0, 0.9);
+  filter: grayscale(100%);
 }
 
 .lauretwo {
   background-image: url(img/layer2.png);
-  background-color: rgba(0, 0, 0, 0.9);
+  filter: grayscale(100%);
 }
 
 .lauretree {
   background-image: url(img/Layer3.png);
-  background-color: rgba(0, 0, 0, 0.9);
+  filter: grayscale(100%);
 }
 
 .services {
   width: 100%;
   display: flex;
+  overflow-x: hidden;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -238,16 +239,18 @@
 .services::before {
   content: "";
   position: absolute;
+  bottom: 0;
   width: 0;
   height: 0;
+  max-width: 100%;
   border-bottom: 100px solid white;
-  border-left: 99vw solid transparent;
-  bottom: 0;
+  border-left: 100vw solid transparent;
 }
 
 .services::after {
   content: "";
   position: absolute;
+
   width: 0;
   height: 0;
   border-top: 100px solid white;
